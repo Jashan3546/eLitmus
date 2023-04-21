@@ -1,0 +1,32 @@
+<nav class="navbar navbar-dark navbar-expand-lg bg-dark ">
+    <div class="container-fluid ">
+        <a class="navbar-brand" href="#">eLitmus</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-felx justify-content-end " id="navbarNav">
+            <ul class="navbar-nav">
+                <% if(locals.user){ %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/profile/<%= locals.user.id %>">
+                            <%= user.name %>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/sign-out">SignOut</a>
+                    </li>
+                    <% }else{ %>
+                        <li class="nav-item"><a class="nav-link" href="/users/signin">signIn</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/users/signup">signUp</a></li>
+                        <% } %>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+
+<header>
+
+
+</header>
